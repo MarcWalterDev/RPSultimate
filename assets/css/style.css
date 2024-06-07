@@ -28,9 +28,13 @@
 	cursor: pointer;
 }
 
+#game {
+	display: none;
+}
+
 #choices {
 	position: absolute;
-	display: none;
+	display: flex;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
@@ -40,7 +44,6 @@
 #rock,
 #paper,
 #scissors {
-	display: block;
 	margin: 25px;
 	cursor: pointer;
 	border: 1px solid black;
@@ -51,7 +54,6 @@
 
 #input,
 #score {
-	display: none;
 	position: absolute;
 	left: 50%;
 	transform: translate(-50%, -50%);
