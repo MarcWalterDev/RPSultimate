@@ -27,22 +27,22 @@ let choices = ["rock", "paper", "scissors"];
 
 //main game function
 
+playerChoice = document.querySelectorAll("#choices div");
+
+playerChoice.forEach(choice => {
+	choice.addEventListener("click", function () {
+		let selection = this.id;
+		let compChoice = choices[Math.floor(Math.random() * choices.length)];
+		input.innerHTML = `computer chose: <b>${compChoice}</b>  |  you chose: <b>${selection}</b>`;
+
+		winner(selection, compChoice);
+	});
+});
+
 function playGame(playerChoice) {
 	let input = document.getElementById("input");
 	playerWins = 0;
 	compWins = 0;
-
-	playerChoice = document.querySelectorAll("#choices div");
-
-	playerChoice.forEach(choice => {
-		choice.addEventListener("click", function () {
-			let selection = this.id;
-			let compChoice = choices[Math.floor(Math.random() * choices.length)];
-			input.innerHTML = `computer chose: <b>${compChoice}</b>  |  you chose: <b>${selection}</b>`;
-
-			winner(selection, compChoice);
-		});
-	});
 }
 
 //determins winner
@@ -73,19 +73,16 @@ let compWins = 0;
 
 function checkWin() {
 	if (playerWins === 2) {
-		document.getElementById("game").style.display = "none";
-		document.getElementById("begin-btn").style.display = "block";
-		resetGame();
-		console.log("you won");
+		endGame("YOU WIN!");
 	} else if (compWins === 2) {
-		document.getElementById("game").style.display = "none";
-		document.getElementById("begin-btn").style.display = "block";
-		resetGame();
-		console.log("you lost");
+		endGame("YOU LOST!");
 	}
 }
 
-function resetGame() {
+function endGame(resultMessage) {
+	document.getElementById("game").style.display = "none";
+	document.getElementById("begin-btn").style.display = "block";
+	document.getElementById("result").textContent = resultMessage;
 	playerWins = 0;
 	compWins = 0;
 }
