@@ -25,7 +25,7 @@ document.getElementById("close-help").addEventListener("click", function () {
 
 let choices = ["rock", "paper", "scissors"];
 
-//main game function
+//main game function and player choice
 
 playerChoice = document.querySelectorAll("#choices div");
 
@@ -33,6 +33,8 @@ playerChoice.forEach(choice => {
 	choice.addEventListener("click", function () {
 		let selection = this.id;
 		let compChoice = choices[Math.floor(Math.random() * choices.length)];
+		let input = document.getElementById("input");
+		input.style.display = "block";
 		input.innerHTML = `computer chose: <b>${compChoice}</b>  |  you chose: <b>${selection}</b>`;
 
 		winner(selection, compChoice);
@@ -40,7 +42,9 @@ playerChoice.forEach(choice => {
 });
 
 function playGame(playerChoice) {
-	let input = document.getElementById("input");
+	input.style.display = "none";
+	message.style.display = "none";
+	result.textContent = "";
 	playerWins = 0;
 	compWins = 0;
 }
@@ -49,6 +53,7 @@ function playGame(playerChoice) {
 
 function winner(player, computer) {
 	let message = document.getElementById("message");
+	message.style.display = "block";
 	if (player === computer) {
 		message.innerHTML = "<p>It's a draw</p>";
 	} else if (
@@ -82,7 +87,10 @@ function checkWin() {
 function endGame(resultMessage) {
 	document.getElementById("game").style.display = "none";
 	document.getElementById("begin-btn").style.display = "block";
-	document.getElementById("result").textContent = resultMessage;
+
+	let result = document.getElementById("result");
+	result.textContent = resultMessage;
+
 	playerWins = 0;
 	compWins = 0;
 }
