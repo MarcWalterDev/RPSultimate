@@ -16,6 +16,25 @@
 - I want to play more rock, paper, scissors.
   - Yes, the user can indeed play more Rock, Paper, Scissors.
 
+## Validation and performance
+
+### CSS - w3
+
+![css validation](/assets/images/testing/cssvalid.png) \
+passed CSS validator checks
+
+### HTML - w3
+
+![html validation](/assets/images/testing/htmlvalid.png) \
+passed HTML validation checks
+
+### JavaScript - JShint
+
+![javascript](/assets/images/testing/jsvalid.png)
+passed test with no major issues
+
+### performance - lighthouse
+
 ## Bugs and fixes
 
 Due to time constraints, in my rush/panic I didn't document the bugs properly/at all, here is a list of some of the issues (that I can remember) I encountered along the way:
