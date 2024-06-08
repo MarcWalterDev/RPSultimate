@@ -29,6 +29,8 @@ let choices = ["rock", "paper", "scissors"];
 
 function playGame(playerChoice) {
 	let input = document.getElementById("input");
+	playerWins = 0;
+	compWins = 0;
 
 	playerChoice = document.querySelectorAll("#choices div");
 
@@ -56,9 +58,11 @@ function winner(player, computer) {
 	) {
 		message.innerHTML = "<p>You win!</p>";
 		playerWins++;
+		checkWin();
 	} else {
 		message.innerHTML = "<p>You lost</p>";
 		compWins++;
+		checkWin();
 	}
 }
 
@@ -67,9 +71,21 @@ function winner(player, computer) {
 let playerWins = 0;
 let compWins = 0;
 
-if (playerWins === 2) {
-	console.log("you won");
-} else if (compWins === 2) {
-	document.getElementById("game").style.display = "none";
-	console.log("you lost");
+function checkWin() {
+	if (playerWins === 2) {
+		document.getElementById("game").style.display = "none";
+		document.getElementById("begin-btn").style.display = "block";
+		resetGame();
+		console.log("you won");
+	} else if (compWins === 2) {
+		document.getElementById("game").style.display = "none";
+		document.getElementById("begin-btn").style.display = "block";
+		resetGame();
+		console.log("you lost");
+	}
+}
+
+function resetGame() {
+	playerWins = 0;
+	compWins = 0;
 }
