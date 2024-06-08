@@ -4,15 +4,20 @@
 	margin: 0;
 	padding: 0;
 	font-family: "Khand", sans-serif;
+	color: #f0f4ef;
+}
+
+body {
+	background-color: #0d1821;
 }
 
 header {
 	height: 90px;
-	border-bottom: 1px solid black;
+	border-bottom: 1px solid #344966;
 }
 
 #help {
-	border: 1px solid black;
+	border: 1px solid #bfcc94;
 	border-radius: 5px;
 	padding: 5px;
 	cursor: pointer;
@@ -24,22 +29,29 @@ header {
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	border: 1px solid black;
+	border: 1px solid #bfcc94;
 	border-radius: 5px;
 	padding: 5px;
-	background-color: white;
+	background-color: #b4cded;
 	z-index: 10;
 	text-align: center;
 }
 
+#howto p,
+#howto h2,
+#howto span {
+	color: #000;
+}
+
 #close-help {
 	font-weight: 700;
-	border: 2px solid black;
+	border: 2px solid #000;
 	border-radius: 100%;
 	padding: 0 7px;
 	position: absolute;
 	top: 5px;
 	right: 5px;
+	cursor: pointer;
 }
 
 #title {
@@ -58,7 +70,7 @@ header {
 	left: 50%;
 	transform: translate(-50%, -50%);
 	text-align: center;
-	border: 1px solid black;
+	border: 1px solid #bfcc94;
 	border-radius: 5px;
 	padding: 0 5px;
 	cursor: pointer;
@@ -82,7 +94,7 @@ header {
 #scissors {
 	margin: 25px;
 	cursor: pointer;
-	border: 1px solid black;
+	border: 1px solid #bfcc94;
 	border-radius: 5px;
 	padding: 0 5px;
 	width: 100px;
@@ -112,4 +124,23 @@ header {
 #result {
 	top: 40%;
 	font-size: 3rem;
+}
+
+/* media queries */
+
+@media screen and (max-width: 475px) {
+	#input {
+		width: 100%;
+		text-align: center;
+		margin-top: 10px;
+	}
+
+	#choices {
+		display: flex;
+		flex-direction: column;
+	}
+
+	#howto {
+		width: 80%;
+	}
 }

@@ -1,10 +1,11 @@
 # RPS Ultimate
 
+![preview of page](/assets/images/testing/preview.png)
+
 A game of rock, paper, scissors. Played troughout the ages (or at least since scissors and paper were invented) this timelesss classic is a game of chance and daring, now in digital form. Play three rounds head to head against the computer in the _ultimate_ battle of man vs machine. No friends required.
 
+Link to live site [here](https://marcwalterdev.github.io/RPSultimate/) \
 This application was designed as an interactive web app for an assignment from [The Code Institute](https://www.codeinstitute.net)
-
-## Table of Contents
 
 ## User Stories
 
@@ -20,9 +21,13 @@ This application was designed as an interactive web app for an assignment from [
 
 ## Design
 
-With this being a simple game I wanted to reflect that in the design with easy to use controls. It should be obvious what selection the user has made and also what selection the computer has made. The game should display who has won each round and declare the overall winner of the game.
+With this being a simple game I wanted to reflect that in the design with easy to use controls. It should be obvious what selection the user has made and also what selection the computer has made. The game should display who has won each round and declare the overall winner of the game. \
+I would have liked to spend more time designing this game. I would like to use images of hands on either side of the play space representing the computer and player choices.
 
-I would have liked to spend more time designing this game. I would like to use images of hands on either side of the play space representing the computer and player choices. As for the colour pallette: one would have been good.
+### Colours
+
+I used the Coolors app to find the colour scheme. \
+![colour pallette](/assets/images/testing/pallette.jpeg)
 
 ## Features
 
