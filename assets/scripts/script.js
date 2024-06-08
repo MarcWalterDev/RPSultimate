@@ -5,6 +5,8 @@ document.getElementById("begin-btn").addEventListener("click", function () {
 });
 
 let choices = ["rock", "paper", "scissors"];
+let playerWins = 0;
+let compWins = 0;
 
 function playGame(playerChoice) {
 	let input = document.getElementById("input");
@@ -15,7 +17,7 @@ function playGame(playerChoice) {
 		choice.addEventListener("click", function () {
 			let selection = this.id;
 			let compChoice = choices[Math.floor(Math.random() * choices.length)];
-			input.innerHTML = `computer chose: ${compChoice}  |  you chose: ${selection}`;
+			input.innerHTML = `computer chose: <b>${compChoice}</b>  |  you chose: <b>${selection}</b>`;
 
 			winner(selection, compChoice);
 		});
@@ -23,15 +25,24 @@ function playGame(playerChoice) {
 }
 
 function winner(player, computer) {
+	let message = document.getElementById("message");
 	if (player === computer) {
-		console.log("it's a draw");
+		message.innerHTML = "<p>It's a draw</p>";
 	} else if (
 		(player === "rock" && computer === "scissors") ||
 		(player === "paper" && computer === "rock") ||
 		(player === "scissors" && computer === "paper")
 	) {
-		console.log("you win");
+		message.innerHTML = "<p>You win!</p>";
+		playerWins++;
 	} else {
-		console.log("loser!");
+		message.innerHTML = "<p>You lost</p>";
+		compWins++;
 	}
+}
+
+if (playerWins === 2) {
+	console.log("you won");
+} else if (compWins === 2) {
+	console.log("you lost");
 }

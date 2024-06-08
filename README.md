@@ -1,114 +1,58 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# RPS Ultimate
 
-Welcome Marc Walter,
+A game of rock, paper, scissors. Played troughout the ages (or at least since scissors and paper were invented) this timelesss classic is a game of chance and daring, now in digital form. Go head to head against the computer. No friends required.
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+This application was designed as an interactive web app for an assignment from [The Code Institute](https://www.thecodeinstitute.com)
 
-You can safely delete this README.md file or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **May 28, 2024**
+## Table of Contents
 
-## Gitpod Reminders
+## User Stories
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+### As a first time user I...
 
-`python3 -m http.server`
+- want to play a game of rock, paper, scissors.
+- want to learn the rules of the game.
+- would like to see an attractive presentation.
 
-A blue button should appear to click: _Make Public_,
+### As a returning user I...
 
-Another blue button should appear to click: _Open Browser_.
+- want to play more rock, paper, scissors.
 
-To run a backend Python file, type `python3 app.py` if your Python file is named `app.py`, of course.
+## Design
 
-A blue button should appear to click: _Make Public_,
+With this being a simple game I wanted to reflect that in the design with easy to use controls. It should be obvious what selection the user has made and also what selection the computer has made. The game should display who has won each round and declare the overall winner of the game.
 
-Another blue button should appear to click: _Open Browser_.
+## Features
 
-By Default, Gitpod gives you superuser security privileges. Therefore, you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+The page is split into two main sections the title area and the play space.
 
-To log into the Heroku toolbelt CLI:
+### Title area
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+This section simply contains the title of the game and a button for the instructions
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you, so do not share it. If you accidentally make it public, you can create a new one with _Regenerate API Key_.
+### Play space
 
-------
+This section contains all the game features. It is where the instructions are displayed when the user clicks the button from the title section.
+Upon first loading the page the user is presented with a button to start the game. \
+Once the game been started the section will split into three sub-sections: \
+The score section which displays the scores of the user and computer from the previous rounds. \
+The users and computer selection of the previous round and a message displaying whether the user won or lost. \
+And buttons for the options of the current round; rock ,paper, or scissors.
 
-## Release History
+### Future Features
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+In a future release I would like to add the option to select the number of rounds for each game.
 
-**May 28 2024:** Fix Mongo and Links installs
+## Testing
 
-**April 26 2024:** Update node version to 16
+Testing can be found in the following documentation:
 
-**September 20 2023:** Update Python version to 3.9.17.
+- [testing.md](/testing.md)
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+## Deployment
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+## Credits
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+## Final thoughts
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
-
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
-
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
-
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
-
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
-
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
-
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
-
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
-
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
-
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
-
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
-
-------
-
-## FAQ about the uptime script
-
-**Why have you added this script?**
-
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
-
-**How will this affect me?**
-
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
-
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
-
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
-
-**So….?**
-
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
-
-**Can I opt out?**
-
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
-
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
-
-**Anything more?**
-
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
-
----
-
-Happy coding!
+I've really stuggled with this section of the Code Institute course. To say I am not happy with this project at the time of writing would be an understatement. Going forward I would like to better understand the concepts of JavaScript as it plays an important role in web development and is key to creating an emersive web experience for the user. I chose the RPS game due to it's simplicity in design but would have much rather created something with a little more complexity but I just ran out of time.
