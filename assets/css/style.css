@@ -90,7 +90,8 @@ header {
 
 #input,
 #score,
-#message {
+#message,
+#result {
 	position: absolute;
 	left: 50%;
 	transform: translate(-50%, -50%);
@@ -106,4 +107,9 @@ header {
 
 #message {
 	top: 80%;
+}
+
+#result {
+	top: 40%;
+	font-size: 3rem;
 }

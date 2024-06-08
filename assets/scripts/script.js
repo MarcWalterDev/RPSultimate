@@ -21,11 +21,11 @@ document.getElementById("close-help").addEventListener("click", function () {
 	document.getElementById("howto").style.display = "none";
 });
 
-//gane choices array
+//game choices array
 
 let choices = ["rock", "paper", "scissors"];
 
-//main game function and player choice
+//playgame function and player/computer choice - see testing.md bugs and fixes
 
 playerChoice = document.querySelectorAll("#choices div");
 
@@ -49,7 +49,7 @@ function playGame(playerChoice) {
 	compWins = 0;
 }
 
-//determins winner
+//determines round winner - see testing.md bugs and fixes
 
 function winner(player, computer) {
 	let message = document.getElementById("message");
@@ -84,13 +84,12 @@ function checkWin() {
 	}
 }
 
+// end game function
+
 function endGame(resultMessage) {
 	document.getElementById("game").style.display = "none";
 	document.getElementById("begin-btn").style.display = "block";
 
 	let result = document.getElementById("result");
 	result.textContent = resultMessage;
-
-	playerWins = 0;
-	compWins = 0;
 }
