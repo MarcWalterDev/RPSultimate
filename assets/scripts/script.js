@@ -1,12 +1,31 @@
+//hides begin button, calls playGame()
+
 document.getElementById("begin-btn").addEventListener("click", function () {
 	document.getElementById("begin-btn").style.display = "none";
 	document.getElementById("game").style.display = "block";
 	playGame();
 });
 
+//show and close instructions
+
+document.getElementById("help").addEventListener("click", function () {
+	let instruct = document.getElementById("howto");
+	if (instruct.style.display === "none") {
+		instruct.style.display = "block";
+	} else {
+		instruct.style.display = "none";
+	}
+});
+
+document.getElementById("close-help").addEventListener("click", function () {
+	document.getElementById("howto").style.display = "none";
+});
+
+//gane choices array
+
 let choices = ["rock", "paper", "scissors"];
-let playerWins = 0;
-let compWins = 0;
+
+//main game function
 
 function playGame(playerChoice) {
 	let input = document.getElementById("input");
@@ -23,6 +42,8 @@ function playGame(playerChoice) {
 		});
 	});
 }
+
+//determins winner
 
 function winner(player, computer) {
 	let message = document.getElementById("message");
@@ -41,8 +62,14 @@ function winner(player, computer) {
 	}
 }
 
+//scoring
+
+let playerWins = 0;
+let compWins = 0;
+
 if (playerWins === 2) {
 	console.log("you won");
 } else if (compWins === 2) {
+	document.getElementById("game").style.display = "none";
 	console.log("you lost");
 }

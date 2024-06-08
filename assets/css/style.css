@@ -6,6 +6,42 @@
 	font-family: "Khand", sans-serif;
 }
 
+header {
+	height: 90px;
+	border-bottom: 1px solid black;
+}
+
+#help {
+	border: 1px solid black;
+	border-radius: 5px;
+	padding: 5px;
+	cursor: pointer;
+}
+
+#howto {
+	display: none;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	border: 1px solid black;
+	border-radius: 5px;
+	padding: 5px;
+	background-color: white;
+	z-index: 10;
+	text-align: center;
+}
+
+#close-help {
+	font-weight: 700;
+	border: 2px solid black;
+	border-radius: 100%;
+	padding: 0 7px;
+	position: absolute;
+	top: 5px;
+	right: 5px;
+}
+
 #title {
 	text-align: center;
 	margin: 20px;
