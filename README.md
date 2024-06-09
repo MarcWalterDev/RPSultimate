@@ -1,6 +1,6 @@
 # RPS Ultimate
 
-![preview of page](/assets/images/testing/preview.png)
+![preview of page](/assets/images/readme/preview.png)
 
 A game of rock, paper, scissors. Played troughout the ages (or at least since scissors and paper were invented) this timelesss classic is a game of chance and daring, now in digital form. Play three rounds head to head against the computer in the _ultimate_ battle of man vs machine. No friends required.
 
@@ -27,7 +27,7 @@ I would have liked to spend more time designing this game. I would like to use i
 ### Colours
 
 I used the Coolors app to find the colour scheme. \
-![colour pallette](/assets/images/testing/pallette.jpeg)
+![colour pallette](/assets/images/readme/pallette.jpeg)
 
 ## Features
 
